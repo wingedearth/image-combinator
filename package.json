@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/babel src --out-dir build",
+    "bump": "npm version patch && git push && git push --tags",
     "clean": "rimraf build",
     "prebuild": "npm run clean"
   },
