@@ -1,0 +1,16 @@
+{
+	"presets": [
+		[
+			"env",
+			{
+				"modules": false,
+				"loose": true
+			}
+		], "react"
+	],
+	"plugins": [
+		"syntax-dynamic-import"
+	],
+	"env": {
+	}
+}

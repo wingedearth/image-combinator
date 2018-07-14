@@ -4,7 +4,9 @@
   "description": "An interface for stitching images together",
   "main": "index.js",
   "scripts": {
-    "build": "./node_modules/.bin/babel src --out-dir build"
+    "build": "./node_modules/.bin/babel src --out-dir build",
+    "clean": "rimraf build",
+    "prebuild": "npm run clean"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,7 @@
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-polyfill": "^6.26.0",
     "babel-register": "^6.26.0",
-    "babel-runtime": "^6.26.0"
+    "babel-runtime": "^6.26.0",
+    "rimraf": "^2.6.2"
   }
 }
