@@ -6,7 +6,7 @@ const initialStateData = {
 		venture: ['Thaddeus', 'Dean', 'Hank', 'Brock Sampson', 'JJ', 'Helper']
 	},
 	mainStore: {
-		title: 'Music Search'
+		title: 'Image Combinator'
 	},
 	imageStore: {
 		images: [],
