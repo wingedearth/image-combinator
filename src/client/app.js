@@ -39,7 +39,6 @@ class App extends Component {
  * start app when DOM is loaded
  */
 function startApp() {
-	console.log('starting APP');
 	const mainElement = document.getElementById('main');
 	const initialState = window.__INITIAL_STATE;
 	const renderElement = (
