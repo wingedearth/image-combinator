@@ -30,7 +30,16 @@ class StoreProvider extends Component {
 						},
 						removeImage: indx => {
 							const { imageStore } = this.state;
-							let newImageStore = imageStore.images.filter((image, index) => index != indx);
+							const newImages = imageStore.images.filter((image, index) => index != indx);
+							const newImageStore = Object.assign({}, imageStore, {
+								images: newImages
+							});
+
+							this.setState({ imageStore: newImageStore });
+						},
+						resetImages: () => {
+							const { imageStore } = this.state;
+							const newImageStore = _.merge({}, imageStore, { images: [] });
 
 							this.setState({ imageStore: newImageStore });
 						},
