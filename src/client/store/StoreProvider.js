@@ -22,10 +22,17 @@ class StoreProvider extends Component {
 					store: this.state,
 					actions: {
 						addImage: image => {
-							const {imageStore} = this.state;
+							const { imageStore } = this.state;
 							const newImageStore = _.merge({}, imageStore);
 
 							newImageStore.images.push(image);
+							this.setState({ imageStore: newImageStore });
+						},
+						toggleUploadReady: () => {
+							const { imageStore } = this.state;
+							const uploadReady = !imageStore.uploadReady;
+							const newImageStore = _.merge({}, imageStore, { uploadReady });
+
 							this.setState({ imageStore: newImageStore });
 						}
 					}
