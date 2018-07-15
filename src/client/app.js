@@ -2,7 +2,7 @@ import React, { Component, createContext } from 'react';
 import ReactDOM from 'react-dom';
 import StoreProvider from './store/StoreProvider';
 import StoreConsumer from './store/StoreConsumer';
-import Home from './components/Home';
+import Home from './components/home-component';
 import './css/styles.scss';
 
 /**
