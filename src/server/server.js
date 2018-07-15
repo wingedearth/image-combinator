@@ -13,8 +13,6 @@ server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
 server.use(express.static('./build'));
-server.use(express.static(path.resolve(__dirname, '..')));
-server.use(express.static(path.resolve(__dirname, '..', 'client')));
 server.use(express.static(path.resolve(__dirname, '..', 'assets')));
 server.use(router);
 
