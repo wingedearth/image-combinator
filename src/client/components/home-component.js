@@ -10,9 +10,7 @@ class Home extends Component {
 		return (
 			<div className="home">
 				<Header />
-				<StoreConsumer>
-					<MainPage />
-				</StoreConsumer>
+				<MainPage />
 				<Footer />
 			</div>
 		);

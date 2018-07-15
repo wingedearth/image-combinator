@@ -10,7 +10,8 @@ const initialStateData = {
 	},
 	imageStore: {
 		images: [],
-		combinedImage: ''
+		combinedImage: '',
+		uploadReady: true
 	}
 };
 const markup = 'Welcome to Image Combinator!';

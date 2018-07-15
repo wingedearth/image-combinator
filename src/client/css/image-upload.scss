@@ -1,0 +1,28 @@
+.image-upload {
+	position: relative;
+	margin: 15px auto;
+}
+
+.image-upload__container {
+	margin: 30px auto;
+	border: 1px dashed black;
+	width: 350px;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.image-upload__container:hover {
+	border: 1px dashed red;
+	color: red;
+}
+
+.image-upload__icon {
+	display: block;
+	width: 50px;
+	margin: 10px auto;
+}
+
+.image-upload__text {
+	position: relative;
+	display: block;
+}

@@ -1,0 +1,23 @@
+.upload-button {
+	margin: 0 auto;
+	text-align: center;
+	width: 200px;
+	height: 30px;
+	background-color: purple;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.upload-button:hover {
+	background-color: lighten(purple, 10%);
+}
+
+.upload-button__container {
+	line-height: 30px;
+	vertical-align: middle;
+}
+
+.upload-button__text {
+	color: white;
+	font-size: 15px;
+}

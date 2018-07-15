@@ -1,7 +1,7 @@
 # image-combinator
 A web application allowing a user to add images (by dragging and dropping) and then stitching the images together to create a combined image.
 
-Current deployment: N/A
+Current deployment: http://image-combinator.herokuapp.com/
 
 Follow Agile progress of the app on my Trello board: https://trello.com/b/yVfofOB8/image-combinator
 
