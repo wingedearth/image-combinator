@@ -1,12 +1,19 @@
 {
   "name": "image-combinator",
-  "version": "0.0.0",
+  "version": "0.0.4",
   "description": "An interface for stitching images together",
   "main": "index.js",
   "scripts": {
     "build": "./node_modules/.bin/babel src --out-dir build",
+    "bump": "npm version patch && git push && git push --tags",
     "clean": "rimraf build",
-    "prebuild": "npm run clean"
+    "frontend": "node ./node_modules/webpack/bin/webpack --config webpack/webpack.config.frontend.js",
+    "frontend:dev": "node ./node_modules/webpack/bin/webpack --config webpack/webpack.config.frontend.js --watch",
+    "prebuild": "npm run clean",
+    "server": "ENVIRONMENT=production node ./node_modules/webpack/bin/webpack --config webpack/webpack.config.backend.js && node ./build/server.js",
+    "server:dev": "ENVIRONMENT=development node ./node_modules/webpack/bin/webpack --config webpack/webpack.config.backend.js --watch",
+    "start": "npm run clean && npm run frontend && ENVIRONMENT=production npm run server",
+    "start:dev": "npm run clean && npm run frontend:dev & npm run server:dev"
   },
   "repository": {
     "type": "git",
@@ -21,16 +28,47 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1"
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^5.1.0",
+    "eslint-config": "^0.3.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.10.0"
   },
   "dependencies": {
+    "babel-loader": "^7.1.5",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-polyfill": "^6.26.0",
     "babel-register": "^6.26.0",
     "babel-runtime": "^6.26.0",
-    "rimraf": "^2.6.2"
+    "body-parser": "^1.18.3",
+    "css-loader": "^1.0.0",
+    "express": "^4.16.3",
+    "file-loader": "^1.1.11",
+    "lodash": "^4.17.10",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.2",
+    "nodemon-webpack-plugin": "^3.0.1",
+    "path": "^0.12.7",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.16.0",
+    "webpack-assets-manifest": "^3.0.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-node-externals": "^1.7.2",
+    "webpack-omit-js-for-css-plugin": "^3.1.0"
   }
 }
