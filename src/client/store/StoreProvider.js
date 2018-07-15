@@ -28,6 +28,12 @@ class StoreProvider extends Component {
 							newImageStore.images.push(image);
 							this.setState({ imageStore: newImageStore });
 						},
+						removeImage: indx => {
+							const { imageStore } = this.state;
+							let newImageStore = imageStore.images.filter((image, index) => index != indx);
+
+							this.setState({ imageStore: newImageStore });
+						},
 						toggleUploadReady: () => {
 							const { imageStore } = this.state;
 							const uploadReady = !imageStore.uploadReady;
