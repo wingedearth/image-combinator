@@ -15,8 +15,8 @@
 		"commonjs": true,
 		"jest": true
 	},
-	"extends": ["standard", "prettier", "prettier/standard"],
-	"plugins": ["prettier"],
+	"extends": ["standard", "prettier", "prettier/standard", "plugin:react/recommended"],
+	"plugins": ["prettier", "react"],
 	"globals" : {
 	},
 	"rules": {
@@ -29,6 +29,8 @@
 				"printWidth": 120
 			}
 		],
+		"react/jsx-uses-react": "error",
+    	"react/jsx-uses-vars": "error",
 		"semi": [2, "always"],
 		"indent": [2, "tab", {"SwitchCase": 1}],
 		"no-tabs": 0,
