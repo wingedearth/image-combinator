@@ -1,0 +1,24 @@
+@import 'variables';
+
+.footer {
+	position: relative;
+	height: 75px;
+	width: 100%;
+	margin: 0 0px;
+}
+
+.footer__textblock {
+	position: relative;
+	padding: 10px 10px;
+	width: 100%;
+	text-align: center;
+}
+
+.footer__textblock-text {
+	color: #666160;
+	font-weight: 700;
+	font-size: 15px;
+	margin-left: auto;
+	margin-right: 100px;
+	text-shadow: 1px 0.5px 0.5px lightblue;
+}

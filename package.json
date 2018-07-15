@@ -7,9 +7,13 @@
     "build": "./node_modules/.bin/babel src --out-dir build",
     "bump": "npm version patch && git push && git push --tags",
     "clean": "rimraf build",
+    "frontend": "node ./node_modules/webpack/bin/webpack --config webpack/webpack.config.frontend.js",
+    "frontend:dev": "node ./node_modules/webpack/bin/webpack --config webpack/webpack.config.frontend.js --watch",
     "prebuild": "npm run clean",
-    "server": "ENVIRONMENT=production node ./node_modules/webpack/bin/webpack --config ./webpack/webpack.config.backend.js && node ./build/server.js",
-    "server:dev": "ENVIRONMENT=development node ./node_modules/webpack/bin/webpack --config ./webpack/webpack.config.backend.js --watch"
+    "server": "ENVIRONMENT=production node ./node_modules/webpack/bin/webpack --config webpack/webpack.config.backend.js && node ./build/server.js",
+    "server:dev": "ENVIRONMENT=development node ./node_modules/webpack/bin/webpack --config webpack/webpack.config.backend.js --watch",
+    "start": "npm run clean && npm run frontend && ENVIRONMENT=production npm run server",
+    "start:dev": "npm run clean && npm run frontend:dev & npm run server:dev"
   },
   "repository": {
     "type": "git",
@@ -54,6 +58,9 @@
     "node-sass": "^4.9.2",
     "nodemon-webpack-plugin": "^3.0.1",
     "path": "^0.12.7",
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.0.3",
     "style-loader": "^0.21.0",

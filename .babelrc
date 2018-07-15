@@ -3,13 +3,13 @@
 		[
 			"env",
 			{
-				"modules": "commonjs",
+				"modules": false,
 				"loose": true
 			}
 		], "react"
 	],
 	"plugins": [
-		["syntax-dynamic-import", "transform-runtime"]
+		["syntax-dynamic-import"]
 	],
 	"env": {
 	}
