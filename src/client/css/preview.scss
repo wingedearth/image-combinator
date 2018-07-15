@@ -1,0 +1,21 @@
+.preview {
+	position: relative;
+	display: block;
+	text-align: center;
+	margin: 25px auto;
+}
+
+.preview__img {
+	width: 250px;
+	margin: 0 auto;
+}
+
+.preview__text {
+	font-weight: 700;
+	margin: 10px auto;
+}
+
+.preview__button-remove {
+	display: block;
+	margin: 7px auto;
+}
