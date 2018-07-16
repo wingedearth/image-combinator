@@ -10,7 +10,7 @@ class Merged extends Component {
 		return (
 			<div className="merged">
 				<div className="merged__container">
-					<p className="merged__text">Merged Image</p>
+					<p className="merged__text">Right Click On Merged Image To Download</p>
 					<img className="merged__img" src={image} />
 				</div>
 			</div>
