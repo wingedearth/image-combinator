@@ -16,7 +16,8 @@ Follow Agile progress of the app on my Trello board: https://trello.com/b/yVfofO
 8. React Context API
 9. ESLint
 10. Sass
-11. merge-img
+11. merge-image
+12. base64ArrayBuffer (http://jsperf.com/encoding-xhr-image-data/5)
 
 ## Server summary
 An Express.js server in a Node.js runtime exposes a root route (and a fallback route) to get the skeleton of a main page from the server.
