@@ -1,13 +1,10 @@
 import React, { Component, createContext } from 'react';
 import _ from 'lodash';
-import mergeImg from 'merge-img';
 import base64ArrayBuffer from '../../assets/lib/base64ArrayBuffer';
-import Jimp from 'jimp';
 import mergeImages from 'merge-images';
 import PropTypes from 'prop-types';
 import { Context } from '../store/store';
 import Merged from '../components/merged';
-import axios from 'axios';
 
 const { Provider } = Context;
 
@@ -18,9 +15,7 @@ class StoreProvider extends Component {
 		this.state = window.__INITIAL_STATE;
 	}
 
-	loadFile(file, indx) {
-		// if (!Number.isInteger(indx) || indx < 0 || indx > 3) return;
-
+	loadFile(file) {
 		const reader = new FileReader();
 
 		return new Promise(resolve => {
