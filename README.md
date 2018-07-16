@@ -11,14 +11,13 @@ Follow Agile progress of the app on my Trello board: https://trello.com/b/yVfofO
 3. Express.js
 4. Babeljs
 5. Webpack
-6. MongoDB
+6. Sass
 7. React
-8. React Context API
-9. ESLint
-10. Sass
-11. merge-image
+8. ESLint
+9. React Context API (https://reactjs.org/docs/context.html)
+10. React-Dropzone (https://react-dropzone.netlify.com/)
+11. merge-image (https://www.npmjs.com/package/merge-images)
 12. base64ArrayBuffer (http://jsperf.com/encoding-xhr-image-data/5)
-13. React-Dropzone
 
 ## Server summary
 An Express.js server in a Node.js runtime exposes a root route (and a fallback route) to get the skeleton of a main page from the server.
