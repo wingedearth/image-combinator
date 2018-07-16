@@ -1,0 +1,11 @@
+.nav {
+	display: block;
+	width: 100%;
+}
+
+.nav__container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import StoreConsumer from '../store/StoreConsumer';
 import Header from './header';
 import MainPage from './mainPage';
@@ -10,7 +10,9 @@ class Home extends Component {
 		return (
 			<div className="home">
 				<Header />
-				<MainPage />
+				<StoreConsumer>
+					<MainPage />
+				</StoreConsumer>
 				<Footer />
 			</div>
 		);

@@ -17,12 +17,12 @@ class Preview extends Component {
 		const { index } = this.props;
 		const id = `preview-${index}`;
 		const image = this.props.image;
-		// const { store, actions } = this.props;
 
 		return (
 			<div id={id} className="preview">
 				<p className="preview__text">Image: {index + 1}</p>
 				<button className="preview__button-remove" onClick={e => this.removeImage(e, index)}>Remove</button>
+				<img className="preview__natural" src={image.preview} />
 				<img className="preview__img" src={image.preview} />
 			</div>
 		);
