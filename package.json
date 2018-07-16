@@ -1,6 +1,6 @@
 {
   "name": "image-combinator",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "An interface for stitching images together",
   "main": "index.js",
   "scripts": {
