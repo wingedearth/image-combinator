@@ -9,37 +9,10 @@ import '../css/image-upload.scss';
 import { MAX_IMAGE_LENGTH } from '../../assets/constants';
 
 class ImageUpload extends Component {
-	constructor(props) {
-		super(props);
-	}
-
 	addImage(file) {
 		const { actions } = this.props;
 
 		actions.addImage(file);
-	}
-
-	removeImage(indx) {
-		const { actions } = this.props;
-
-		actions.removeImage(indx);
-	}
-
-	loadFile(file, indx) {
-		// validate indx argument
-		if (!Number.isInteger(indx) || indx < 0 || indx > 3) return;
-
-		const self = this;
-		const reader = new FileReader();
-
-		reader.onload = () => {
-			const fileAsBinaryString = reader.result;
-			return fileAsBinaryString;
-		};
-		reader.onabort = () => console.log('file reading was aborted');
-		reader.onerror = () => console.log('file reading has failed');
-		const binaryString = reader.readAsBinaryString(file);
-		const arrayBuffer = reader.readAsArrayBuffer(file);
 	}
 
 	onDrop(acceptedFiles, rejectedFiles) {
@@ -47,9 +20,6 @@ class ImageUpload extends Component {
 		const { imageStore } = store;
 
 		if (imageStore.images.length >= MAX_IMAGE_LENGTH) return;
-
-		console.log('acceptedFiles:', acceptedFiles);
-		console.log('rejectedFiles:', rejectedFiles);
 
 		actions.addImage(acceptedFiles[0]);
 	}
@@ -77,18 +47,9 @@ class ImageUpload extends Component {
 					onDrop={this.onDrop.bind(this)}
 				>
 					<img className="image-upload__icon" src="images/upload-arrow.jpg" />
-					<p className="image-upload__text">drag and drop an image file here to upload</p>
+					<p className="image-upload__text">Click or drop an image file here to upload</p>
 					<p className="image-upload__text-reject">Invalid File Type</p>
 				</Dropzone>
-
-				{/* Add Image Previews */}
-				{images.map((image, index) => (
-					<div key={`preview-${index}`}>
-						<StoreConsumer>
-							<Preview image={image} index={index} />
-						</StoreConsumer>
-					</div>
-				))}
 			</div>
 		);
 	}
